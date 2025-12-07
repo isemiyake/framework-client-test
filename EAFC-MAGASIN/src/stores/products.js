@@ -9,7 +9,6 @@ export const useProductStore = defineStore('products', {
 
   actions: {
     async loadProducts() {
-      // On remplit le stock
       this.products = await DB.findAll()
     }
   }

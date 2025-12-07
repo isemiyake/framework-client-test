@@ -3,7 +3,11 @@
     <TheHeader />
 
     <main class="container mx-auto py-8 px-4 flex flex-wrap">
+      
       <ProductList />
+      
+      <ShoppingCart />
+
     </main>
 
     <TheFooter />
@@ -13,5 +17,6 @@
 <script setup>
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
-import ProductList from './components/ProductList.vue' 
+import ProductList from './components/ProductList.vue'
+import ShoppingCart from './components/ShoppingCart.vue' 
 </script>
