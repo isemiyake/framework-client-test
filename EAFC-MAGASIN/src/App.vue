@@ -1,11 +1,18 @@
-<script setup></script>
-
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="bg-gray-100 min-h-screen font-sans flex flex-col">
+    <TheHeader />
+
+    <main class="container mx-auto py-8 px-4 flex flex-wrap">
+      <h1 class="text-2xl text-gray-400 w-full text-center mt-10">
+        Le magasin est en construction...
+      </h1>
+    </main>
+
+    <TheFooter />
+  </div>
 </template>
 
-<style scoped></style>
+<script setup>
+import TheHeader from './components/TheHeader.vue'
+import TheFooter from './components/TheFooter.vue'
+</script>
