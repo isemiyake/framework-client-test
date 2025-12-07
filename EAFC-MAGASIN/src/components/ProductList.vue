@@ -19,7 +19,10 @@
           <h2 class="font-bold text-lg mb-2">{{ product.name }}</h2>
           <p class="text-gray-700">€{{ product.price }}</p>
           
-          <button class="mt-4 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <button 
+            @click="cartStore.addToCart(product)"
+            class="mt-4 w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded active:transform active:scale-95"
+          >
             Ajouter
           </button>
         </div>
@@ -30,9 +33,14 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
 import { useProductStore } from '@/stores/products.js';
+import { useShoppingcartStore } from '@/stores/shoppingcart.js';
 
 const productStore = useProductStore();
+const cartStore = useShoppingcartStore();
 
-productStore.loadProducts();
+onMounted(() => {
+  productStore.loadProducts();
+});
 </script>
