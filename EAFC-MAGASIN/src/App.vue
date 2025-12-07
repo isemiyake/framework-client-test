@@ -3,9 +3,7 @@
     <TheHeader />
 
     <main class="container mx-auto py-8 px-4 flex flex-wrap">
-      <h1 class="text-2xl text-gray-400 w-full text-center mt-10">
-        Le magasin est en construction...
-      </h1>
+      <ProductList />
     </main>
 
     <TheFooter />
@@ -15,4 +13,5 @@
 <script setup>
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
+import ProductList from './components/ProductList.vue' 
 </script>
