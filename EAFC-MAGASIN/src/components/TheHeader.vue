@@ -4,7 +4,9 @@
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <span class="font-bold text-xl">EAFC Magasin</span>
       </div>
-      <button class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
+      <button
+        class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white"
+      >
         <i class="fas fa-bars"></i>
       </button>
     </div>

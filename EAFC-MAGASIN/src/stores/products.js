@@ -1,15 +1,15 @@
 // src/stores/products.js
-import { defineStore } from 'pinia'
-import DB from '../services/DB.js' 
+import { defineStore } from "pinia";
+import DB from "../services/DB.js";
 
-export const useProductStore = defineStore('products', {
+export const useProductStore = defineStore("products", {
   state: () => ({
-    products: []
+    products: [],
   }),
 
   actions: {
     async loadProducts() {
-      this.products = await DB.findAll()
-    }
-  }
-})
+      this.products = await DB.findAll();
+    },
+  },
+});
