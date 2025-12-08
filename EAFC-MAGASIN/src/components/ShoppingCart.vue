@@ -1,3 +1,20 @@
+<script setup>
+import { ref } from "vue";
+import { useShoppingcartStore } from "@/stores/shoppingcart.js";
+
+const cartStore = useShoppingcartStore();
+
+const isClosing = ref(false);
+
+const triggerAnimation = () => {
+  isClosing.value = true;
+};
+
+const updateQty = (id, value) => {
+  const qty = parseInt(value);
+  cartStore.updateQuantity(id, qty);
+};
+</script>
 <template>
   <aside class="w-full md:w-1/3 px-4">
     <h2 class="text-xl font-bold mb-4">Votre Panier</h2>
@@ -94,20 +111,4 @@
   </aside>
 </template>
 
-<script setup>
-import { ref } from "vue";
-import { useShoppingcartStore } from "@/stores/shoppingcart.js";
 
-const cartStore = useShoppingcartStore();
-
-const isClosing = ref(false);
-
-const triggerAnimation = () => {
-  isClosing.value = true;
-};
-
-const updateQty = (id, value) => {
-  const qty = parseInt(value);
-  cartStore.updateQuantity(id, qty);
-};
-</script>

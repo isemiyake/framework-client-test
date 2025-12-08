@@ -1,3 +1,15 @@
+<script setup>
+import { useProductStore } from "@/stores/products.js";
+
+import { useShoppingcartStore } from "@/stores/shoppingcart.js";
+
+const productStore = useProductStore();
+
+const cartStore = useShoppingcartStore();
+
+productStore.loadProducts();
+</script>
+
 <template>
   <section class="w-full md:w-2/3 px-4 mb-8">
     <h1 class="text-3xl font-bold mb-4">Nouveaux produits</h1>
@@ -37,14 +49,3 @@
   </section>
 </template>
 
-<script setup>
-import { useProductStore } from "@/stores/products.js";
-
-import { useShoppingcartStore } from "@/stores/shoppingcart.js";
-
-const productStore = useProductStore();
-
-const cartStore = useShoppingcartStore();
-
-productStore.loadProducts();
-</script>
