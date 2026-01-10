@@ -1,4 +1,4 @@
-# 🛒 EAFC Magasin - E-commerce Dashboard
+# 🛒 EAFC Magasin - Interface Boutique
 
 Une application de commerce en ligne moderne développée avec **Vue 3** et **Pinia** pour une gestion d'état centralisée et réactive.
 
